@@ -2,12 +2,20 @@ import UIKit
 
 protocol FruitsListViewModelProtocol {
     var title: String { get }
+    var fruits: [FruitItemDto] { get }
+}
+
+protocol FruitsListViewModelDelegate: AnyObject {
+    func didTapCell(with fruit: FruitItemDto)
+    func didFinishLoading(with date: Date)
 }
 
 final class FruitsListViewController: UIViewController {
     
     // MARK: - Properties
+    weak var delegate: FruitsListViewModelDelegate!
     private var viewModel: FruitsListViewModelProtocol!
+    private let tableView = UITableView()
     
     var viewModelFactory: () -> FruitsListViewModelProtocol = {
         fatalError("View model has not been created")
@@ -17,6 +25,7 @@ final class FruitsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        delegate.didFinishLoading(with: Date())
         configureViewController()
         
         bind(viewModel: viewModelFactory())
@@ -30,5 +39,40 @@ private extension FruitsListViewController {
         self.viewModel = viewModel
         
         navigationItem.title = viewModel.title
+        configureTableView()
+    }
+    
+    func configureTableView() {
+        view.addSubview(tableView)
+        
+        tableView.frame = view.bounds
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.removeExcessCells()
+        
+        tableView.reloadData()
+    }
+}
+
+// MARK: - UITableView extension
+extension FruitsListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.fruits.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let fruit = viewModel.fruits[indexPath.row]
+        
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = fruit.type
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let fruit = viewModel.fruits[indexPath.row]
+        delegate.didTapCell(with: fruit)
     }
 }

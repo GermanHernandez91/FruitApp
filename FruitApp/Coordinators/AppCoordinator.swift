@@ -21,6 +21,9 @@ final class AppCoordinator: Coordinator {
                              sendEvent: actions.sendEvent,
                              displayError: { [weak self] in self?.goTo(.displayError($0)) })
     }()
+    lazy var apiClient: APIClient = {
+        return APIClient(networkSession: self.dependencies.networkSession)
+    }()
     
     // MARK: - Lifecycle
     init(dependencies: Dependencies, actions: Actions) {
@@ -94,8 +97,15 @@ private extension AppCoordinator {
             let navController = UINavigationController()
             rootViewController = navController
             
-            let fruitsDependencies = FruitsCoordinator.Dependencies(navController: navController)
-            childCoordinator = FruitsCoordinator(dependencies: fruitsDependencies)
+            let remoteDataSource = FruitsRemoteDataSource(apiClient: apiClient)
+            let repository = FruitsRepo(remoteDataSource: remoteDataSource)
+            
+            let fruitsDependencies = FruitsCoordinator.Dependencies(navController: navController, repository: repository)
+            let fruitsActions = FruitsCoordinator.Actions(displayLoader: commonActions.displayLoader,
+                                                          dispalyError: commonActions.displayError,
+                                                          sendEvent: commonActions.sendEvent)
+            
+            childCoordinator = FruitsCoordinator(dependencies: fruitsDependencies, actions: fruitsActions)
             childCoordinator?.start()
         }
     }
