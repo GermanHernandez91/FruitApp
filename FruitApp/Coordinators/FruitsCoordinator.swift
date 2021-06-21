@@ -2,6 +2,7 @@ import UIKit
 
 private enum Screen {
     case fetchFruits
+    case refreshFruits(completion: RefreshCompleted)
     case fruitsList(FruitsDto)
 }
 
@@ -48,16 +49,16 @@ private extension FruitsCoordinator {
         
         switch screen {
         case .fetchFruits:
-            actions.displayLoader(.init(show: true))
+            // actions.displayLoader(.init(show: true))
             
             dependencies.repository.fetchFruits { [weak self] result in
                 guard let self = self else { return }
                 
-                self.actions.displayLoader(.init(show: false))
+                // self.actions.displayLoader(.init(show: false))
                 
                 let methodFinish = Date()
                 let executionTime = methodFinish.timeIntervalSince(self.startLoadingScreen)
-                print("Execution time: \(executionTime)")
+                print("Execution time fetching data: \(executionTime)")
                 self.actions.sendEvent(.init(category: .load, data: "\(executionTime)"))
                 
                 switch result {
@@ -69,13 +70,36 @@ private extension FruitsCoordinator {
                     self.actions.sendEvent(.init(category: .error, data: error.localizedDescription))
                 }
             }
+            
+        case let .refreshFruits(completion):
+            
+            dependencies.repository.fetchFruits { [weak self] result in
+                guard let self = self else { return }
+                
+                self.actions.displayLoader(.init(show: false))
+                
+                let methodFinish = Date()
+                let executionTime = methodFinish.timeIntervalSince(self.startLoadingScreen)
+                print("Execution time fetching data: \(executionTime)")
+                self.actions.sendEvent(.init(category: .load, data: "\(executionTime)"))
+                
+                switch result {
+                case .success(let fruits):
+                    completion(fruits)
+                    
+                case .failure(let error):
+                    completion(nil)
+                    self.actions.sendEvent(.init(category: .error, data: error.localizedDescription))
+                }
+            }
         
         case let .fruitsList(fruits):
             
             let viewController = FruitsListViewController()
             
             viewController.viewModelFactory = {
-                FruitsListViewModel(data: fruits)
+                FruitsListViewModel(data: fruits,
+                                    beginFrefresh: { [weak self] completion in self?.goTo(.refreshFruits(completion: completion)) })
             }
             
             viewController.delegate = self

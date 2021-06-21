@@ -3,6 +3,8 @@ import UIKit
 protocol FruitsListViewModelProtocol {
     var title: String { get }
     var fruits: [FruitItemDto] { get }
+    
+    func refresh(completion: @escaping () -> Void)
 }
 
 protocol FruitsListViewModelDelegate: AnyObject {
@@ -15,7 +17,9 @@ final class FruitsListViewController: UIViewController {
     // MARK: - Properties
     weak var delegate: FruitsListViewModelDelegate!
     private var viewModel: FruitsListViewModelProtocol!
+    
     private let tableView = UITableView()
+    private let refreshControl = UIRefreshControl()
     
     var viewModelFactory: () -> FruitsListViewModelProtocol = {
         fatalError("View model has not been created")
@@ -40,6 +44,7 @@ private extension FruitsListViewController {
         
         navigationItem.title = viewModel.title
         configureTableView()
+        configureRefreshControl()
     }
     
     func configureTableView() {
@@ -51,6 +56,18 @@ private extension FruitsListViewController {
         tableView.removeExcessCells()
         
         tableView.reloadData()
+    }
+    
+    func configureRefreshControl() {
+        self.refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: UIControl.Event.valueChanged)
+        self.tableView.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        viewModel.refresh() { [weak self] in
+            self?.refreshControl.endRefreshing()
+            self?.tableView.reloadData()
+        }
     }
 }
 
