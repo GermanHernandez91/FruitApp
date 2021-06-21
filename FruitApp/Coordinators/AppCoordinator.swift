@@ -16,13 +16,11 @@ final class AppCoordinator: Coordinator {
     var rootViewController: UIViewController?
     
     private lazy var overlayCoordinator = OverlayCoordinator()
+    private lazy var apiClient = APIClient(networkSession: dependencies.networkSession)
     lazy var commonActions: CommonActions = {
         return CommonActions(displayLoader: { [weak self] in self?.goTo(.loader($0)) },
                              sendEvent: actions.sendEvent,
                              displayError: { [weak self] in self?.goTo(.displayError($0)) })
-    }()
-    lazy var apiClient: APIClient = {
-        return APIClient(networkSession: self.dependencies.networkSession)
     }()
     
     // MARK: - Lifecycle
@@ -74,7 +72,9 @@ private extension AppCoordinator {
                 guard let self = self else { return }
                 
                 guard let navigationController = self.activeNavigationController else {
-                    assertionFailure("Unable to retrive navigation controller")
+                    let errorMessage = "Unable to retrive navigation controller"
+                    assertionFailure(errorMessage)
+                    self.actions.sendEvent(.init(category: .error, data: errorMessage))
                     return
                 }
                 
@@ -95,8 +95,6 @@ private extension AppCoordinator {
         case .fruits:
             
             let navController = UINavigationController()
-            rootViewController = navController
-            
             let remoteDataSource = FruitsRemoteDataSource(apiClient: apiClient)
             let repository = FruitsRepo(remoteDataSource: remoteDataSource)
             
@@ -105,6 +103,7 @@ private extension AppCoordinator {
                                                           dispalyError: commonActions.displayError,
                                                           sendEvent: commonActions.sendEvent)
             
+            rootViewController = navController
             childCoordinator = FruitsCoordinator(dependencies: fruitsDependencies, actions: fruitsActions)
             childCoordinator?.start()
         }

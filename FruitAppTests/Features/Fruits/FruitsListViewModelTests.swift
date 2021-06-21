@@ -24,8 +24,8 @@ final class FruitsListViewModelTest: XCTestCase {
 
 private extension FruitsListViewModelTest {
     
-    func generateViewModel() -> FruitsListViewModelProtocol {
-        return FruitsListViewModel(data: mockFruitsDto)
+    func generateViewModel(beginRefresh: (@escaping (@escaping RefreshCompleted) -> Void) = { _ in }) -> FruitsListViewModelProtocol {
+        return FruitsListViewModel(data: mockFruitsDto, beginFrefresh: beginRefresh)
     }
 }
 

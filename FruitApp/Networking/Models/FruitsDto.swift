@@ -10,11 +10,11 @@ struct FruitsDto: Equatable {
 
 struct FruitItemDto: Equatable {
     let type: String
-    let price, weight: Int
+    let price, weight: Double
     
     init(response: FruitItemResponse) {
         self.type = response.type
-        self.price = response.price
-        self.weight = response.weight
+        self.price = (Double(response.price) / 100) // Convert into pounds from pence
+        self.weight = (Double(response.weight) / 1000) // Convert into kg from grams
     }
 }

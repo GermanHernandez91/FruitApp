@@ -4,6 +4,7 @@ private enum Screen {
     case fetchFruits
     case refreshFruits(completion: RefreshCompleted)
     case fruitsList(FruitsDto)
+    case fruitDetails(FruitItemDto)
 }
 
 final class FruitsCoordinator: Coordinator {
@@ -49,15 +50,14 @@ private extension FruitsCoordinator {
         
         switch screen {
         case .fetchFruits:
-            // actions.displayLoader(.init(show: true))
+            
+            let startDate = Date()
             
             dependencies.repository.fetchFruits { [weak self] result in
                 guard let self = self else { return }
-                
-                // self.actions.displayLoader(.init(show: false))
-                
-                let methodFinish = Date()
-                let executionTime = methodFinish.timeIntervalSince(self.startLoadingScreen)
+            
+                let finishDate = Date()
+                let executionTime = finishDate.timeIntervalSince(startDate)
                 print("Execution time fetching data: \(executionTime)")
                 self.actions.sendEvent(.init(category: .load, data: "\(executionTime)"))
                 
@@ -72,15 +72,15 @@ private extension FruitsCoordinator {
             }
             
         case let .refreshFruits(completion):
+
+            let startDate = Date()
             
             dependencies.repository.fetchFruits { [weak self] result in
                 guard let self = self else { return }
                 
-                self.actions.displayLoader(.init(show: false))
-                
-                let methodFinish = Date()
-                let executionTime = methodFinish.timeIntervalSince(self.startLoadingScreen)
-                print("Execution time fetching data: \(executionTime)")
+                let finishDate = Date()
+                let executionTime = finishDate.timeIntervalSince(startDate)
+                print("Execution time refreshing data: \(executionTime)")
                 self.actions.sendEvent(.init(category: .load, data: "\(executionTime)"))
                 
                 switch result {
@@ -105,6 +105,16 @@ private extension FruitsCoordinator {
             viewController.delegate = self
             
             dependencies.navController.setViewControllers([viewController], animated: false)
+            
+        case let .fruitDetails(fruitItem):
+            
+            let viewController = FruitDetailsViewController()
+            
+            viewController.viewModelFactory = {
+                FruitDetailsViewModel(fruit: fruitItem)
+            }
+            
+            dependencies.navController.pushViewController(viewController, animated: true)
         }
     }
 }
@@ -113,11 +123,12 @@ private extension FruitsCoordinator {
 extension FruitsCoordinator: FruitsListViewModelDelegate {
     
     func didTapCell(with fruit: FruitItemDto) {
-        print(fruit)
+        goTo(.fruitDetails(fruit))
     }
     
     func didFinishLoading(with date: Date) {
         let executionTime = date.timeIntervalSince(startLoadingScreen)
+        print("Execution time loading screen: \(executionTime)")
         actions.sendEvent(.init(category: .display, data: "\(executionTime)"))
     }
 }
