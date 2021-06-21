@@ -11,6 +11,14 @@
 		7778045126807F900081A5C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778045026807F900081A5C3 /* SceneDelegate.swift */; };
 		7778045826807F900081A5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7778045726807F900081A5C3 /* Assets.xcassets */; };
 		7778045B26807F900081A5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7778045926807F900081A5C3 /* LaunchScreen.storyboard */; };
+		77780484268081100081A5C3 /* FruitsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780483268081100081A5C3 /* FruitsListViewController.swift */; };
+		77780486268081180081A5C3 /* FruitsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780485268081180081A5C3 /* FruitsListViewModel.swift */; };
+		7778048A268081A50081A5C3 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780489268081A50081A5C3 /* UIViewController+Extensions.swift */; };
+		7778048D268082150081A5C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778048C268082150081A5C3 /* AppCoordinator.swift */; };
+		7778048F2680821C0081A5C3 /* ErrorHandlingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778048E2680821C0081A5C3 /* ErrorHandlingCoordinator.swift */; };
+		77780491268082220081A5C3 /* OverlayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780490268082220081A5C3 /* OverlayCoordinator.swift */; };
+		77780493268082280081A5C3 /* FruitsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780492268082280081A5C3 /* FruitsCoordinator.swift */; };
+		77780496268082390081A5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780495268082390081A5C3 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +40,14 @@
 		7778045C26807F900081A5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7778046126807F900081A5C3 /* FruitAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7778046726807F910081A5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77780483268081100081A5C3 /* FruitsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListViewController.swift; sourceTree = "<group>"; };
+		77780485268081180081A5C3 /* FruitsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListViewModel.swift; sourceTree = "<group>"; };
+		77780489268081A50081A5C3 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		7778048C268082150081A5C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7778048E2680821C0081A5C3 /* ErrorHandlingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingCoordinator.swift; sourceTree = "<group>"; };
+		77780490268082220081A5C3 /* OverlayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayCoordinator.swift; sourceTree = "<group>"; };
+		77780492268082280081A5C3 /* FruitsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsCoordinator.swift; sourceTree = "<group>"; };
+		77780495268082390081A5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				7778047F268080860081A5C3 /* App */,
+				7778048B2680820B0081A5C3 /* Coordinators */,
+				77780480268080E70081A5C3 /* Features */,
+				77780487268081950081A5C3 /* Common */,
 				7778047E2680807A0081A5C3 /* Resources */,
 				7778045C26807F900081A5C3 /* Info.plist */,
 			);
@@ -104,6 +123,67 @@
 				7778045026807F900081A5C3 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		77780480268080E70081A5C3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				77780481268080F20081A5C3 /* Fruits */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		77780481268080F20081A5C3 /* Fruits */ = {
+			isa = PBXGroup;
+			children = (
+				77780482268080FB0081A5C3 /* FruitsList */,
+			);
+			path = Fruits;
+			sourceTree = "<group>";
+		};
+		77780482268080FB0081A5C3 /* FruitsList */ = {
+			isa = PBXGroup;
+			children = (
+				77780483268081100081A5C3 /* FruitsListViewController.swift */,
+				77780485268081180081A5C3 /* FruitsListViewModel.swift */,
+			);
+			path = FruitsList;
+			sourceTree = "<group>";
+		};
+		77780487268081950081A5C3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				77780494268082330081A5C3 /* Protocols */,
+				777804882680819B0081A5C3 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		777804882680819B0081A5C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				77780489268081A50081A5C3 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7778048B2680820B0081A5C3 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				7778048C268082150081A5C3 /* AppCoordinator.swift */,
+				7778048E2680821C0081A5C3 /* ErrorHandlingCoordinator.swift */,
+				77780490268082220081A5C3 /* OverlayCoordinator.swift */,
+				77780492268082280081A5C3 /* FruitsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		77780494268082330081A5C3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				77780495268082390081A5C3 /* Coordinator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,8 +285,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7778048F2680821C0081A5C3 /* ErrorHandlingCoordinator.swift in Sources */,
+				77780491268082220081A5C3 /* OverlayCoordinator.swift in Sources */,
+				77780496268082390081A5C3 /* Coordinator.swift in Sources */,
+				7778048D268082150081A5C3 /* AppCoordinator.swift in Sources */,
+				77780484268081100081A5C3 /* FruitsListViewController.swift in Sources */,
+				77780486268081180081A5C3 /* FruitsListViewModel.swift in Sources */,
+				7778048A268081A50081A5C3 /* UIViewController+Extensions.swift in Sources */,
 				7778044F26807F900081A5C3 /* AppDelegate.swift in Sources */,
 				7778045126807F900081A5C3 /* SceneDelegate.swift in Sources */,
+				77780493268082280081A5C3 /* FruitsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
