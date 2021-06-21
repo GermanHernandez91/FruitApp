@@ -19,9 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         self.window = window
         
-        let appDependencies = AppCoordinator.Dependencies(window: window)
+        let networkSession = NetworkSession.defaultSession()
+        let appActions = AppCoordinator.Actions(sendEvent: { AnalyticsTracker.sendEvent($0, networkSession: networkSession) })
+        let appDependencies = AppCoordinator.Dependencies(window: window, networkSession: networkSession)
         
-        coordinator = AppCoordinator(dependencies: appDependencies)
+        coordinator = AppCoordinator(dependencies: appDependencies, actions: appActions)
         coordinator?.start()
     }
 

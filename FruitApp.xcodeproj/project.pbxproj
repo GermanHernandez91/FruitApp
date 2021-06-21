@@ -19,6 +19,45 @@
 		77780491268082220081A5C3 /* OverlayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780490268082220081A5C3 /* OverlayCoordinator.swift */; };
 		77780493268082280081A5C3 /* FruitsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780492268082280081A5C3 /* FruitsCoordinator.swift */; };
 		77780496268082390081A5C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780495268082390081A5C3 /* Coordinator.swift */; };
+		77780499268084FE0081A5C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77780498268084FE0081A5C3 /* Constants.swift */; };
+		7778049C268085320081A5C3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778049B268085320081A5C3 /* NetworkError.swift */; };
+		7778049E268085380081A5C3 /* RepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778049D268085380081A5C3 /* RepositoryError.swift */; };
+		777804A0268085580081A5C3 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7778049F268085580081A5C3 /* UITableView+Extensions.swift */; };
+		777804A2268085680081A5C3 /* ErrorMessage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804A1268085680081A5C3 /* ErrorMessage+Extensions.swift */; };
+		777804A42680857B0081A5C3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804A32680857B0081A5C3 /* Endpoint.swift */; };
+		777804A6268085890081A5C3 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804A5268085890081A5C3 /* Dismissable.swift */; };
+		777804A92680859A0081A5C3 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804A82680859A0081A5C3 /* HTTPMethod.swift */; };
+		777804AB268085B40081A5C3 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804AA268085B40081A5C3 /* ErrorMessage.swift */; };
+		777804AD268085D10081A5C3 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804AC268085D10081A5C3 /* Loader.swift */; };
+		777804AF268085DC0081A5C3 /* CommonActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804AE268085DC0081A5C3 /* CommonActions.swift */; };
+		777804B1268085E60081A5C3 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804B0268085E60081A5C3 /* NetworkSession.swift */; };
+		777804B3268085F00081A5C3 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804B2268085F00081A5C3 /* AnalyticsEvent.swift */; };
+		777804B92680874C0081A5C3 /* ErrorHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804B82680874C0081A5C3 /* ErrorHandlingViewController.swift */; };
+		777804BB268087590081A5C3 /* ErrorHandlingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804BA268087590081A5C3 /* ErrorHandlingViewModel.swift */; };
+		777804BD2680877C0081A5C3 /* ErrorViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804BC2680877C0081A5C3 /* ErrorViewControllerFactory.swift */; };
+		777804BF2680878E0081A5C3 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804BE2680878E0081A5C3 /* LoadingViewController.swift */; };
+		777804C1268087950081A5C3 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804C0268087950081A5C3 /* LoadingViewModel.swift */; };
+		777804C7268087DF0081A5C3 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804C6268087DF0081A5C3 /* TitleLabel.swift */; };
+		777804C9268087F20081A5C3 /* BodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804C8268087F20081A5C3 /* BodyLabel.swift */; };
+		777804CC2680884F0081A5C3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804CB2680884F0081A5C3 /* CustomButton.swift */; };
+		777804CF268089870081A5C3 /* AnalyticsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804CE268089870081A5C3 /* AnalyticsTracker.swift */; };
+		777804D2268089A00081A5C3 /* AnalyticsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804D1268089A00081A5C3 /* AnalyticsEndpoint.swift */; };
+		777804D526808A590081A5C3 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804D426808A590081A5C3 /* APIRequest.swift */; };
+		777804D726808A610081A5C3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804D626808A610081A5C3 /* APIClient.swift */; };
+		777804D926808A7F0081A5C3 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804D826808A7F0081A5C3 /* MockApiClient.swift */; };
+		777804DD26808B210081A5C3 /* AnalyticsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804DC26808B210081A5C3 /* AnalyticsRequest.swift */; };
+		777804E026808BCA0081A5C3 /* AnalyticsEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804DF26808BCA0081A5C3 /* AnalyticsEndpointTests.swift */; };
+		777804E32680936E0081A5C3 /* FruitsEnpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804E22680936E0081A5C3 /* FruitsEnpoint.swift */; };
+		777804E8268094200081A5C3 /* FruitsEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804E7268094200081A5C3 /* FruitsEndpointTests.swift */; };
+		777804EA268096D10081A5C3 /* FruitsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804E9268096D10081A5C3 /* FruitsRepository.swift */; };
+		777804EC268096DF0081A5C3 /* FruitsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804EB268096DF0081A5C3 /* FruitsResponse.swift */; };
+		777804EE2680973C0081A5C3 /* FruitsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804ED2680973C0081A5C3 /* FruitsDto.swift */; };
+		777804F0268097FB0081A5C3 /* FruitsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804EF268097FB0081A5C3 /* FruitsRemoteDataSource.swift */; };
+		777804F2268098280081A5C3 /* FruitsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804F1268098280081A5C3 /* FruitsRequest.swift */; };
+		777804F42680983B0081A5C3 /* FruitsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804F32680983B0081A5C3 /* FruitsRepo.swift */; };
+		777804F7268099100081A5C3 /* fmtvp-recruit-test-data-master-data.json.json in Resources */ = {isa = PBXBuildFile; fileRef = 777804F6268099100081A5C3 /* fmtvp-recruit-test-data-master-data.json.json */; };
+		777804F92680992E0081A5C3 /* FruitsRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804F82680992E0081A5C3 /* FruitsRepoTests.swift */; };
+		777804FB26809A050081A5C3 /* FruitsRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777804FA26809A050081A5C3 /* FruitsRemoteDataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +87,45 @@
 		77780490268082220081A5C3 /* OverlayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayCoordinator.swift; sourceTree = "<group>"; };
 		77780492268082280081A5C3 /* FruitsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsCoordinator.swift; sourceTree = "<group>"; };
 		77780495268082390081A5C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		77780498268084FE0081A5C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7778049B268085320081A5C3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		7778049D268085380081A5C3 /* RepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryError.swift; sourceTree = "<group>"; };
+		7778049F268085580081A5C3 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		777804A1268085680081A5C3 /* ErrorMessage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorMessage+Extensions.swift"; sourceTree = "<group>"; };
+		777804A32680857B0081A5C3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		777804A5268085890081A5C3 /* Dismissable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
+		777804A82680859A0081A5C3 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		777804AA268085B40081A5C3 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		777804AC268085D10081A5C3 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		777804AE268085DC0081A5C3 /* CommonActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonActions.swift; sourceTree = "<group>"; };
+		777804B0268085E60081A5C3 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		777804B2268085F00081A5C3 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		777804B82680874C0081A5C3 /* ErrorHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingViewController.swift; sourceTree = "<group>"; };
+		777804BA268087590081A5C3 /* ErrorHandlingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingViewModel.swift; sourceTree = "<group>"; };
+		777804BC2680877C0081A5C3 /* ErrorViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewControllerFactory.swift; sourceTree = "<group>"; };
+		777804BE2680878E0081A5C3 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		777804C0268087950081A5C3 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		777804C6268087DF0081A5C3 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		777804C8268087F20081A5C3 /* BodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyLabel.swift; sourceTree = "<group>"; };
+		777804CB2680884F0081A5C3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		777804CE268089870081A5C3 /* AnalyticsTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsTracker.swift; sourceTree = "<group>"; };
+		777804D1268089A00081A5C3 /* AnalyticsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEndpoint.swift; sourceTree = "<group>"; };
+		777804D426808A590081A5C3 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		777804D626808A610081A5C3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		777804D826808A7F0081A5C3 /* MockApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
+		777804DC26808B210081A5C3 /* AnalyticsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsRequest.swift; sourceTree = "<group>"; };
+		777804DF26808BCA0081A5C3 /* AnalyticsEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEndpointTests.swift; sourceTree = "<group>"; };
+		777804E22680936E0081A5C3 /* FruitsEnpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsEnpoint.swift; sourceTree = "<group>"; };
+		777804E7268094200081A5C3 /* FruitsEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsEndpointTests.swift; sourceTree = "<group>"; };
+		777804E9268096D10081A5C3 /* FruitsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsRepository.swift; sourceTree = "<group>"; };
+		777804EB268096DF0081A5C3 /* FruitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsResponse.swift; sourceTree = "<group>"; };
+		777804ED2680973C0081A5C3 /* FruitsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsDto.swift; sourceTree = "<group>"; };
+		777804EF268097FB0081A5C3 /* FruitsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsRemoteDataSource.swift; sourceTree = "<group>"; };
+		777804F1268098280081A5C3 /* FruitsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsRequest.swift; sourceTree = "<group>"; };
+		777804F32680983B0081A5C3 /* FruitsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsRepo.swift; sourceTree = "<group>"; };
+		777804F6268099100081A5C3 /* fmtvp-recruit-test-data-master-data.json.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "fmtvp-recruit-test-data-master-data.json.json"; sourceTree = "<group>"; };
+		777804F82680992E0081A5C3 /* FruitsRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsRepoTests.swift; sourceTree = "<group>"; };
+		777804FA26809A050081A5C3 /* FruitsRemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsRemoteDataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +170,9 @@
 				7778047F268080860081A5C3 /* App */,
 				7778048B2680820B0081A5C3 /* Coordinators */,
 				77780480268080E70081A5C3 /* Features */,
+				777804D326808A470081A5C3 /* Networking */,
 				77780487268081950081A5C3 /* Common */,
+				77780497268084F10081A5C3 /* Utils */,
 				7778047E2680807A0081A5C3 /* Resources */,
 				7778045C26807F900081A5C3 /* Info.plist */,
 			);
@@ -102,6 +182,8 @@
 		7778046426807F900081A5C3 /* FruitAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				777804E4268094090081A5C3 /* Features */,
+				777804DE26808BBA0081A5C3 /* Analytics */,
 				7778046726807F910081A5C3 /* Info.plist */,
 			);
 			path = FruitAppTests;
@@ -136,6 +218,7 @@
 		77780481268080F20081A5C3 /* Fruits */ = {
 			isa = PBXGroup;
 			children = (
+				777804E12680924B0081A5C3 /* Repository */,
 				77780482268080FB0081A5C3 /* FruitsList */,
 			);
 			path = Fruits;
@@ -153,8 +236,17 @@
 		77780487268081950081A5C3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				777804CD2680897C0081A5C3 /* Analytics */,
+				777804C2268087AB0081A5C3 /* Views */,
+				777804B4268087040081A5C3 /* ViewControllers */,
+				777804A7268085950081A5C3 /* Enums */,
+				7778049A2680852B0081A5C3 /* Errors */,
 				77780494268082330081A5C3 /* Protocols */,
 				777804882680819B0081A5C3 /* Extensions */,
+				777804AC268085D10081A5C3 /* Loader.swift */,
+				777804AE268085DC0081A5C3 /* CommonActions.swift */,
+				777804B0268085E60081A5C3 /* NetworkSession.swift */,
+				777804B2268085F00081A5C3 /* AnalyticsEvent.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -163,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				77780489268081A50081A5C3 /* UIViewController+Extensions.swift */,
+				7778049F268085580081A5C3 /* UITableView+Extensions.swift */,
+				777804A1268085680081A5C3 /* ErrorMessage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,8 +276,199 @@
 			isa = PBXGroup;
 			children = (
 				77780495268082390081A5C3 /* Coordinator.swift */,
+				777804A32680857B0081A5C3 /* Endpoint.swift */,
+				777804A5268085890081A5C3 /* Dismissable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		77780497268084F10081A5C3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				77780498268084FE0081A5C3 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7778049A2680852B0081A5C3 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				7778049B268085320081A5C3 /* NetworkError.swift */,
+				7778049D268085380081A5C3 /* RepositoryError.swift */,
+				777804AA268085B40081A5C3 /* ErrorMessage.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		777804A7268085950081A5C3 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				777804A82680859A0081A5C3 /* HTTPMethod.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		777804B4268087040081A5C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				777804B72680873B0081A5C3 /* ErrorHandling */,
+				777804B6268087120081A5C3 /* LoadingView */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		777804B6268087120081A5C3 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				777804BE2680878E0081A5C3 /* LoadingViewController.swift */,
+				777804C0268087950081A5C3 /* LoadingViewModel.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		777804B72680873B0081A5C3 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				777804B82680874C0081A5C3 /* ErrorHandlingViewController.swift */,
+				777804BA268087590081A5C3 /* ErrorHandlingViewModel.swift */,
+				777804BC2680877C0081A5C3 /* ErrorViewControllerFactory.swift */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		777804C2268087AB0081A5C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				777804CA268088400081A5C3 /* Buttons */,
+				777804C4268087C00081A5C3 /* Cells */,
+				777804C3268087B70081A5C3 /* Labels */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		777804C3268087B70081A5C3 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				777804C6268087DF0081A5C3 /* TitleLabel.swift */,
+				777804C8268087F20081A5C3 /* BodyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		777804C4268087C00081A5C3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		777804CA268088400081A5C3 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				777804CB2680884F0081A5C3 /* CustomButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		777804CD2680897C0081A5C3 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				777804D0268089930081A5C3 /* Repository */,
+				777804CE268089870081A5C3 /* AnalyticsTracker.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		777804D0268089930081A5C3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				777804D1268089A00081A5C3 /* AnalyticsEndpoint.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		777804D326808A470081A5C3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				777804DA26808B130081A5C3 /* Requests */,
+				777804DB26808B180081A5C3 /* Models */,
+				777804D426808A590081A5C3 /* APIRequest.swift */,
+				777804D626808A610081A5C3 /* APIClient.swift */,
+				777804D826808A7F0081A5C3 /* MockApiClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		777804DA26808B130081A5C3 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				777804DC26808B210081A5C3 /* AnalyticsRequest.swift */,
+				777804F1268098280081A5C3 /* FruitsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		777804DB26808B180081A5C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				777804EB268096DF0081A5C3 /* FruitsResponse.swift */,
+				777804ED2680973C0081A5C3 /* FruitsDto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		777804DE26808BBA0081A5C3 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				777804DF26808BCA0081A5C3 /* AnalyticsEndpointTests.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		777804E12680924B0081A5C3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				777804E22680936E0081A5C3 /* FruitsEnpoint.swift */,
+				777804E9268096D10081A5C3 /* FruitsRepository.swift */,
+				777804EF268097FB0081A5C3 /* FruitsRemoteDataSource.swift */,
+				777804F32680983B0081A5C3 /* FruitsRepo.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		777804E4268094090081A5C3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				777804E52680940F0081A5C3 /* Fruits */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		777804E52680940F0081A5C3 /* Fruits */ = {
+			isa = PBXGroup;
+			children = (
+				777804F5268098BE0081A5C3 /* Mocks */,
+				777804E6268094170081A5C3 /* Repository */,
+			);
+			path = Fruits;
+			sourceTree = "<group>";
+		};
+		777804E6268094170081A5C3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				777804E7268094200081A5C3 /* FruitsEndpointTests.swift */,
+				777804F82680992E0081A5C3 /* FruitsRepoTests.swift */,
+				777804FA26809A050081A5C3 /* FruitsRemoteDataSourceTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		777804F5268098BE0081A5C3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				777804F6268099100081A5C3 /* fmtvp-recruit-test-data-master-data.json.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +523,7 @@
 					};
 					7778046026807F900081A5C3 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 						TestTargetID = 7778044A26807F900081A5C3;
 					};
 				};
@@ -275,6 +561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777804F7268099100081A5C3 /* fmtvp-recruit-test-data-master-data.json.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +572,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777804A6268085890081A5C3 /* Dismissable.swift in Sources */,
 				7778048F2680821C0081A5C3 /* ErrorHandlingCoordinator.swift in Sources */,
+				777804A0268085580081A5C3 /* UITableView+Extensions.swift in Sources */,
+				777804C1268087950081A5C3 /* LoadingViewModel.swift in Sources */,
+				777804B1268085E60081A5C3 /* NetworkSession.swift in Sources */,
+				777804CF268089870081A5C3 /* AnalyticsTracker.swift in Sources */,
+				77780499268084FE0081A5C3 /* Constants.swift in Sources */,
 				77780491268082220081A5C3 /* OverlayCoordinator.swift in Sources */,
+				777804D726808A610081A5C3 /* APIClient.swift in Sources */,
+				777804D926808A7F0081A5C3 /* MockApiClient.swift in Sources */,
+				777804BB268087590081A5C3 /* ErrorHandlingViewModel.swift in Sources */,
 				77780496268082390081A5C3 /* Coordinator.swift in Sources */,
+				777804B3268085F00081A5C3 /* AnalyticsEvent.swift in Sources */,
 				7778048D268082150081A5C3 /* AppCoordinator.swift in Sources */,
 				77780484268081100081A5C3 /* FruitsListViewController.swift in Sources */,
+				777804C9268087F20081A5C3 /* BodyLabel.swift in Sources */,
+				777804D526808A590081A5C3 /* APIRequest.swift in Sources */,
+				7778049E268085380081A5C3 /* RepositoryError.swift in Sources */,
+				777804DD26808B210081A5C3 /* AnalyticsRequest.swift in Sources */,
 				77780486268081180081A5C3 /* FruitsListViewModel.swift in Sources */,
+				777804EE2680973C0081A5C3 /* FruitsDto.swift in Sources */,
 				7778048A268081A50081A5C3 /* UIViewController+Extensions.swift in Sources */,
+				777804A42680857B0081A5C3 /* Endpoint.swift in Sources */,
+				777804CC2680884F0081A5C3 /* CustomButton.swift in Sources */,
+				777804B92680874C0081A5C3 /* ErrorHandlingViewController.swift in Sources */,
+				777804F2268098280081A5C3 /* FruitsRequest.swift in Sources */,
+				777804AF268085DC0081A5C3 /* CommonActions.swift in Sources */,
 				7778044F26807F900081A5C3 /* AppDelegate.swift in Sources */,
+				777804EA268096D10081A5C3 /* FruitsRepository.swift in Sources */,
+				777804EC268096DF0081A5C3 /* FruitsResponse.swift in Sources */,
+				777804BD2680877C0081A5C3 /* ErrorViewControllerFactory.swift in Sources */,
+				777804A2268085680081A5C3 /* ErrorMessage+Extensions.swift in Sources */,
+				777804AD268085D10081A5C3 /* Loader.swift in Sources */,
+				777804A92680859A0081A5C3 /* HTTPMethod.swift in Sources */,
+				777804F0268097FB0081A5C3 /* FruitsRemoteDataSource.swift in Sources */,
+				777804C7268087DF0081A5C3 /* TitleLabel.swift in Sources */,
+				777804D2268089A00081A5C3 /* AnalyticsEndpoint.swift in Sources */,
+				777804E32680936E0081A5C3 /* FruitsEnpoint.swift in Sources */,
+				777804F42680983B0081A5C3 /* FruitsRepo.swift in Sources */,
+				7778049C268085320081A5C3 /* NetworkError.swift in Sources */,
+				777804BF2680878E0081A5C3 /* LoadingViewController.swift in Sources */,
 				7778045126807F900081A5C3 /* SceneDelegate.swift in Sources */,
+				777804AB268085B40081A5C3 /* ErrorMessage.swift in Sources */,
 				77780493268082280081A5C3 /* FruitsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +623,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777804E026808BCA0081A5C3 /* AnalyticsEndpointTests.swift in Sources */,
+				777804FB26809A050081A5C3 /* FruitsRemoteDataSourceTests.swift in Sources */,
+				777804E8268094200081A5C3 /* FruitsEndpointTests.swift in Sources */,
+				777804F92680992E0081A5C3 /* FruitsRepoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +813,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXU4QPBL2H;
 				INFOPLIST_FILE = FruitAppTests/Info.plist;
@@ -499,6 +825,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.germanhernandez.FruitAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FruitApp.app/FruitApp";
@@ -510,6 +837,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HXU4QPBL2H;
 				INFOPLIST_FILE = FruitAppTests/Info.plist;
