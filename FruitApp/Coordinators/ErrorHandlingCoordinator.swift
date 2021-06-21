@@ -7,8 +7,7 @@ final class ErrorHandlingCoordinator: Coordinator {
     private let actions: Actions
     
     private lazy var viewControllerFactory = {
-        ErrorViewControllerFactory(dependencies: .init(errorMessage: self.dependencies.errorMessage),
-                                   actions: .init(sendEvent: self.actions.common.sendEvent))
+        ErrorViewControllerFactory(dependencies: .init(errorMessage: self.dependencies.errorMessage))
     }()
     
     // MARK: - Lifecycle

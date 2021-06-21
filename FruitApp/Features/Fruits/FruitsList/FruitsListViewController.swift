@@ -29,9 +29,9 @@ final class FruitsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        delegate.didFinishLoading(with: Date())
         configureViewController()
         
+        delegate.didFinishLoading(with: Date())
         bind(viewModel: viewModelFactory())
     }
 }
@@ -43,6 +43,7 @@ private extension FruitsListViewController {
         self.viewModel = viewModel
         
         navigationItem.title = viewModel.title
+        
         configureTableView()
         configureRefreshControl()
     }

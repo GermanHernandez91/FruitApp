@@ -4,20 +4,14 @@ final class ErrorViewControllerFactory {
     
     // MARK: - Properties
     private let dependencies: Dependencies
-    private let actions: Actions
     
     // MARK: - Lifecylce
-    init(dependencies: Dependencies, actions: Actions) {
+    init(dependencies: Dependencies) {
         self.dependencies = dependencies
-        self.actions = actions
     }
 }
 
 extension ErrorViewControllerFactory {
-    
-    struct Actions {
-        let sendEvent: SendEvent
-    }
     
     struct Dependencies {
         let errorMessage: ErrorMessage

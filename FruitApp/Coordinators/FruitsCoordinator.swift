@@ -89,6 +89,7 @@ private extension FruitsCoordinator {
                     
                 case .failure(let error):
                     completion(nil)
+                    self.actions.dispalyError(.noData())
                     self.actions.sendEvent(.init(category: .error, data: error.localizedDescription))
                 }
             }

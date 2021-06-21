@@ -10,9 +10,11 @@ enum AnalyticsEventType: String {
 
 struct AnalyticsEvent: Encodable {
     
+    // MARK: - Properties
     let category: String
     let data: String
     
+    // MARK: - Lifecycle
     init(category: AnalyticsEventType, data: String) {
         self.category = category.rawValue
         self.data = data

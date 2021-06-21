@@ -15,6 +15,10 @@ extension ErrorMessage {
     static func somethingWentWrong(screenType: ErrorScreenType = .fullScreen) -> ErrorMessage {
         return .init(title: .somethingWentWrongTitle, actionTitle: .somethingWentWrongDesc, screenType: screenType)
     }
+    
+    static func noData(screenType: ErrorScreenType = .alert) -> ErrorMessage {
+        return .init(title: .noDataTitle, description: .noDataDesc, actionTitle: "OK", screenType: screenType, alertAction: nil)
+    }
 }
 
 fileprivate extension String {
@@ -26,4 +30,8 @@ fileprivate extension String {
     // Something went wrong
     static let somethingWentWrongTitle = "Oh no!\nSomething went wrong!"
     static let somethingWentWrongDesc = "Please try again later"
+    
+    // No Data
+    static let noDataTitle = "Something went wrong fetching the data"
+    static let noDataDesc = "We've encounter an issues fetching the data. Please try again later"
 }

@@ -8,7 +8,7 @@ protocol LoadingViewModelProtocol {
 final class LoadingViewController: UIViewController {
     
     // MARK: - Properties
-    private var containerView: UIView!
+    private var activityIndicator: UIActivityIndicatorView!
     private var viewModel: LoadingViewModelProtocol!
     
     var viewModelFactory: () -> LoadingViewModelProtocol = {
@@ -22,6 +22,12 @@ final class LoadingViewController: UIViewController {
         setupUI()
         
         bind(viewModel: viewModelFactory())
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        activityIndicator.stopAnimating()
     }
 }
 
@@ -39,8 +45,6 @@ private extension LoadingViewController {
     }
     
     func setupUI() {
-        
-        var activityIndicator: UIActivityIndicatorView!
         activityIndicator = UIActivityIndicatorView(style: .large)
         
         view.addSubview(activityIndicator)
